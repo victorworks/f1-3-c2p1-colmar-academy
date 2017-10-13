@@ -1,0 +1,575 @@
+/* oystein haugseth */
+/* version 1.0 */
+
+
+/* --------------- base styling --------------- */
+
+
+* {
+  box-sizing: border-box;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+html {
+  /*-- font-family: 'Manuale', serif;*/
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #434345;
+}
+
+a:hover {
+  color: #f4181b;
+}
+
+p,
+blockquote {
+  line-height: 1.4rem;
+  margin: 0.5rem 0;
+}
+
+h1 {
+  margin: 1.25rem 0;
+  font-size: 2.25rem;
+  line-height: 1.2em;
+}
+
+h2 {
+  margin: 2rem 0;
+  font-size: 1.75rem;
+  line-height: 1.2em;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin: 0rem 0;
+  padding-bottom: 0;
+  line-height: 1.4em;
+}
+
+
+/* --------------- header --------------- */
+
+
+nav {
+  z-index: 5 ;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+  padding: 1rem;
+  min-height: 5rem;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: #434345;
+  padding: 0.5rem;
+}
+
+.site-nav a:last-of-type { /* removes right padding of last item in nav */
+  padding-right: 0rem;
+}
+
+.site-nav a:hover {
+  color: #2EBBA8;
+  transition: color 0.4s;
+}
+
+#logo {
+  display: flex;
+  align-items: flex-end;
+}
+
+#logo a { /* styling for logo-text */
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight:300;
+  color: #58595B;
+  text-decoration: none;
+}
+
+#logo span { /* overrides brand color on "colmar" in nav */
+  color: #2EBBA8;
+  font-weight: 600;
+}
+
+#logo a:hover{
+  color: #2EBBA8;
+  font-weight: 600;
+}
+
+#logo img {
+  height: 3rem;
+}
+
+
+
+/* --------------- main --------------- */
+
+
+/* banner */
+
+
+.banner {
+  background-image: url("../img/ThinkstockPhotos-681714024.jpg");
+  background-repeat: repeat;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+  border-bottom-style: solid;
+  border-bottom-color: #2EBBA8;
+  border-bottom-width: 0.5rem;
+}
+
+.banner img {
+  max-width: 60%;
+  padding: 2rem;
+}
+
+.banner h1 {
+  color: #2EBBA8;
+}
+
+.banner-content {
+  max-width: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 2rem;
+  margin-left: 1rem;
+}
+
+.banner-content a { /* styling for button in banner */
+  color: white;
+  background-color: #434345;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;/* testing button here */
+  display: inline-block;
+  position: relative;
+  transition: 0.2s;
+}
+/* testing button here */
+.banner-content a:after {
+  content: '\00bb';
+  position: relative;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.2s;
+}
+
+.banner-content:hover a {
+  padding-right: 25px;
+}
+
+.banner-content:hover a:after {
+  opacity: 1;
+  right: 0;
+}
+/* testing button here */
+
+
+.banner-content a:hover {
+  background-color: #2EBBA8;
+  transition: background-color 0.2s;
+}
+
+.banner-content p { /* custom styling of p-tag in banner */
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.25;
+
+}
+
+
+/* feature */
+
+
+.features {
+  display: flex;
+}
+
+.feature-main {
+  flex-basis: 60%;
+  padding: 2rem;
+}
+
+.feature-main img {
+  border-bottom-style: solid;
+  border-bottom-color: #2EBBA8;
+  border-bottom-width: 0.5rem;
+}
+
+.feature-main h2 {
+  color: #2EBBA8;
+  text-transform: uppercase;
+}
+
+.feature-grid {
+  flex-basis: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: #EEE;
+}
+/* Option one for hover */
+.feature:hover {
+  border-left-style: solid;
+  border-left-color: #2EBBA8;
+  transition: color 0.2s;
+}
+
+/* Sencond Option for Hover
+.feature:hover {
+  color: #fefefe;
+  background-color: #2EBBA8;
+  transition: background-color 0.4s;
+}*/
+
+.feature a:hover {
+  color: #2EBBA8;
+  transition: color 0.2s;
+}
+
+.feature:first-child { /* aligns first item with main content */
+  margin-top: 1rem;
+}
+
+.feature img,
+.feature div {
+  align-self: flex-start;
+}
+
+.feature div {
+  flex-basis: 65%;
+}
+
+.feature img {
+  max-width: 35%;
+  padding-right: 1rem;
+}
+
+.feature a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.caption { /* styles bylines and links  */
+  margin-top: 2rem;
+  font-size: .75rem;
+}
+
+
+/* cards */
+.cards-container {
+  border-top-style: solid;
+  border-top-color: #2EBBA8;
+  border-top-width: 0.5rem;
+  background-image: url("../img/ThinkstockPhotos-681714024.jpg");
+  background-repeat: repeat;
+}
+.cards-container h2 {
+  color: #2EBBA8;
+  text-transform: uppercase;
+}
+.cards-container,
+.feature-container {
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 4rem;
+}
+
+.cards-container h2,
+.feature-container h2 {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* centers cards on device with equal padding */
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.cards .card:hover {
+  color: #2EBBA8;
+  border-bottom-style: solid;
+  border-bottom-color: #2EBBA8;
+  transition: color 0.2s;
+}
+
+.cards .card .card-content p {
+  color: #434345;
+  transition: color 0.2s;
+}
+
+.card {
+  margin-bottom: 2rem;
+  background-color: #fff;
+  flex-basis: 30%;
+  flex-grow: 1;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+
+
+.subhead {
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+  font-size: 0.85rem;
+}
+
+.subhead:hover {
+  color: #2EBBA8;
+}
+
+
+/* feature exhibit (custom adjustments to feature-module for exhibit-section) */
+
+
+.feature-container {
+  background-color: #fff;
+}
+
+.feature-container h2 {
+  text-transform: uppercase;
+  color: #2EBBA8;
+  margin-bottom: 0;
+}
+
+.feature-main h3 {
+  margin-top: 1rem;
+}
+
+
+/* --------------- footer --------------- */
+
+
+footer {
+  display: flex;
+  font-size: 0.75rem;
+  padding: 0 1.5rem;
+  border-top: 1px solid #ddd;
+}
+
+footer p:first-of-type {
+  flex-grow: 1;
+}
+
+footer a:last-of-type {
+  padding-left: 1rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* --------------- @media --------------- */
+
+
+@media only screen and (max-width: 600px) {
+
+  .desktop { /*hides all desktop content */
+    display: none;
+  }
+
+  h1 {
+    margin-top: 1.75rem;
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  /* header-mobile */
+
+  #logo {
+    display: none;
+  }
+
+  .site-nav-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 100%;
+  }
+
+  /* banner mobile */
+
+  .banner {
+    flex-direction: column;
+    border-bottom-style: none;
+  }
+
+  .banner img {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .banner-content {
+    max-width: 100%;
+    margin: 0;
+    padding: 0 1rem 1rem 1rem;
+    text-align: center;
+  }
+
+  .banner-content a {
+    padding: 1rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .banner-content p {
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+
+  /* feature mobile */
+
+  .feature:first-child {
+    margin-top: 0rem;
+  }
+
+  .feature-grid {
+    flex-basis: 100%;
+
+  }
+
+  .feature img {
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .feature {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.5rem;
+  }
+.feature:hover {
+  border-style: none;
+}
+  .feature h3 {
+    color: #2EBBA8;
+    margin: 1rem 0 0.8rem 0;
+  }
+
+  .caption { /* styles small text under paragraphy, main feature */
+    margin-top: 2rem;
+    font-size: .85rem;
+  }
+
+  /* cards-mobile */
+
+  .cards-mobile {
+    text-align: center;
+    margin-top: 3.5rem;
+    width: 100%;
+  }
+.cards-mobile h2 {
+  color: #2EBBA8;
+  text-transform: capitalize;
+}
+  .cards-mobile h4 {
+    background-color: #efefef;
+    padding: 1rem;
+    margin: 0.65rem 1rem;
+  }
+
+  .cards-mobile h4:hover {
+    color: #efefef;
+    background-color: #2EBBA8;
+    transition: background-color 0.2s;
+  }
+
+  /* feature exhibit */
+
+  .feature-main {
+    flex-grow: 1;
+    margin: 1rem;
+    padding: 0;
+  }
+}
+
+
+@media only screen and (min-width: 601px) and (max-width: 900px) { /* minor adjustments for mid-range devices */
+
+  html {
+    font-size: 13px;
+  }
+
+  h1 {
+    margin: 1.2rem 0;
+    font-size: 2rem;
+    line-height: 1.2em;
+  }
+
+  .banner-content p {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+}
+
+
+@media only screen and (min-width: 601px) {
+
+  [class*="mobile"] {
+    display: none;
+  }
+}
+
+
+@media only screen and (min-width: 1200px) {
+  h1 {
+    font-size: 2.65rem;
+  }
+
+  .banner-content {
+    max-width: 25rem;
+  }
+
+  .banner-content a { /* styling for button in banner */
+   font-size: 1.25rem;
+  }
+
+  .banner-content p {
+    font-size: 1.5rem;
+  }
+}
